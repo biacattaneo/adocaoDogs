@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/dogcard';
+import './components/dogcard/dogcard'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <dogcard nome='Dora' raça='vira-lata' idade='3' porte='Médio'></dogcard>
+        <dogcard nome='Dora' raça='vira-lata' idade='3' porte='Médio'>oi</dogcard>
         <a
           className="App-link"
           href="https://reactjs.org"
