@@ -1,13 +1,14 @@
 import React from 'react';
+import Images from '../images/image';
 import './dog-card.css';
-const dogcard = (props) => {    
+
+const DogCard = (props) => {    
     return (
         <div className="dogcard">
-            <p>{props.nome}</p>
-            <p>{props.raça}</p> 
-            <p>{props.idade}</p> 
-            <p>{props.porte}</p>
+            <Images image={props.image}/>
+            <p>Nome: {props.nome} - Raça: {props.raça}</p>
+            <p>Idade: {props.idade} - Porte: {props.porte}</p>
         </div>
     )
 }
-export default dogcard;
+export default DogCard;

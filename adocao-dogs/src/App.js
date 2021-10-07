@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/dogcard/dogcard'
+import Adotante from './components/adotante/adotante';
+import DogCard from './components/dogcard/dogcard';
+import Images from './components/images/image';
+import Home from './components/home/home';
+import Header from './components/header/header';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <dogcard nome='Dora' raça='vira-lata' idade='3' porte='Médio'>oi</dogcard>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Header></Header>
+          <Routes />
+      </BrowserRouter>
+      {/* <Home/>
+      <Adotante  nome="Beatriz" idade="20" sobrevoce="Energética, estagiária e ama passar tempo com doguinhos" />
+      <DogCard image="dora.jpg" nome='Dora' raça='vira-lata' idade='3' porte='Médio'/> */}
     </div>
   );
 }
