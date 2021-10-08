@@ -8,18 +8,18 @@ const Login = (props) => {
                 <div>
                     <div>
                         <p><label>Email </label>
-                            <input type="email" id="nameAdotante" placeholder="exemplodeemail@gmail.com"></input></p>
+                            <input type="email" class="campo" id="nameAdotante" placeholder="exemplodeemail@gmail.com"></input></p>
                     </div>
                 </div>
                 <div>
                     <div>
                         <p><label>Senha </label>
-                            <input type="password" id="contatoAdotante"></input></p>
+                            <input type="password" class="campo" id="contatoAdotante"></input></p>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <input type="submit" value="Entrar"></input>
+                        <input type="submit" id="btnEntrar" value="Entrar"></input>
                     </div>
                 </div>
             </form>

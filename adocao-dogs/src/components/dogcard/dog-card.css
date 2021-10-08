@@ -1,0 +1,17 @@
+.dogcard{
+    text-align: center;
+    margin-right: 33vw;
+    margin-left: 33vw;
+    color: white;
+    box-shadow: 5px 2px 2px black;
+    }
+.dogcard > #main{
+    background-color: green;
+    
+}
+#img{
+    padding-top: 10px;
+}
+#age{
+    padding-bottom: 10px;
+}

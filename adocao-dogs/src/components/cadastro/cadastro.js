@@ -1,4 +1,5 @@
 import React from 'react';
+import './cadastro.css'
 
 const Cadastro = (props) => {
     return (
@@ -7,38 +8,62 @@ const Cadastro = (props) => {
             <form>
                 <div>
                     <div>
-                        <p><label>Nome completo </label>
-                            <input type="text" id="nameAdotante" placeholder="Nome"></input></p>
+                        <label>Nome completo </label>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <p><label>Contato </label>
-                            <input type="tel" id="contatoAdotante" placeholder="019 123456789"></input></p>
+                        <input type="text" class="campo" id="nameAdotante" placeholder="Nome"></input>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <p><label>E-mail </label>
-                            <input type="email" id="emailAdotante" placeholder="exemplodeemail@gmail.com"></input></p>
+                        <label>Contato </label>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <p><label>Senha </label>
-                            <input type="password" id="passwordAdotante" ></input></p>
+                        <input type="tel" class="campo" id="contatoAdotante" placeholder="019 123456789"></input>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <p><label>Confirme senha </label>
-                            <input type="password" id="confirmPasswordAdotante" ></input></p>
+                        <label>E-mail </label>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <p><label>Sobre você </label>
-                            <textarea id="sobreVoceAdotante" rows="5" cols="20"></textarea></p>
+                        <input type="email" class="campo" id="emailAdotante" placeholder="exemplodeemail@gmail.com"></input>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Senha </label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="password" class="campo" id="passwordAdotante" ></input>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Confirme senha </label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="password" class="campo" id="confirmPasswordAdotante" ></input>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Sobre você </label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <textarea id="sobreVoceAdotante" rows="5" cols="20"></textarea>
                     </div>
                 </div>
                 <div>
