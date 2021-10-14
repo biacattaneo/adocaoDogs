@@ -1,11 +1,22 @@
 import React from 'react';
+import './adotante.css';
+import Images from '../images/image';
 
-const Adotante = (props) => {    
+
+const Adotante = (props) => {
     return (
-        <div className="Adotante">
-            <p>{props.image}</p>
-            <p>Nome: {props.nome} - Idade: {props.idade}</p>
-            <p>Sobre: {props.sobrevoce}</p>
+        <div>
+            <h2 id='h2Perfil'>Meu Perfil</h2>
+            <div className="adotante">
+
+                <div id='body'>
+                    <div id='img'>
+                        <Images image={props.image} height='250px' width='250px' />
+                    </div>
+                    <p>Nome: {props.nome} - Idade: {props.idade}</p>
+                    <p>Sobre: {props.sobrevoce}</p>
+                </div>
+            </div>
         </div>
     )
 }
