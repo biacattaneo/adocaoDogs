@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import DogCard, {teste} from '../dogcard/dogcard';
+import DogCard from '../dogcard/dogcard';
 import dora from '../images/dora.jpg';
 import './home.css'
 
-
 const Home = (props) => {    
+    const adicionarCachorro = ()=>{
+        console.log('teste');
+    }
     const [dogs, setDogs] = useState(
         [
             {
@@ -36,17 +38,17 @@ const Home = (props) => {
                 raça:"vira-lata"
             }
         ]
-    )
-    
-    return (
-        <div>
+        )
+        
+        return (
+            <div>
             <div className="home">
                 <h2 id="welcome">Bem vindo ao Adote um Dog</h2>
                 {dogs.map((i, index)=>{
                     return(
-                    <DogCard key={index} nome={i.nome} idade={i.idade} image={i.image} porte={i.porte} raça={i.porte}></DogCard>
-                    );
-                })
+                        <DogCard key={index} nome={i.nome} idade={i.idade} image={i.image} porte={i.porte} raça={i.porte}></DogCard>
+                        );
+                    })
                 }
             </div>
         </div>
