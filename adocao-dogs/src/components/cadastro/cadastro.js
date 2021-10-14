@@ -13,7 +13,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="text" class="campo" id="nameAdotante" placeholder="Nome"></input>
+                        <input required type="text" className="campo" id="nameAdotante" placeholder="Nome"></input>
                     </div>
                 </div>
                 <div>
@@ -23,7 +23,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="tel" class="campo" id="contatoAdotante" placeholder="019 123456789"></input>
+                        <input required type="tel" className="campo" id="contatoAdotante" placeholder="019 123456789"></input>
                     </div>
                 </div>
                 <div>
@@ -33,7 +33,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="email" class="campo" id="emailAdotante" placeholder="exemplodeemail@gmail.com"></input>
+                        <input required type="email" className="campo" id="emailAdotante" placeholder="exemplodeemail@gmail.com"></input>
                     </div>
                 </div>
                 <div>
@@ -43,7 +43,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="password" class="campo" id="passwordAdotante" ></input>
+                        <input required type="password" className="campo" id="passwordAdotante" ></input>
                     </div>
                 </div>
                 <div>
@@ -53,7 +53,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="password" class="campo" id="confirmPasswordAdotante" ></input>
+                        <input required type="password" className="campo" id="confirmPasswordAdotante" ></input>
                     </div>
                 </div>
                 <div>

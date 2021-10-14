@@ -2,12 +2,15 @@ import React, { useContext } from 'react';
 import Images from '../images/image';
 import './dog-card.css';
 
-const DogCard = (props) => {    
+export const teste = ()=>{
+    console.log('oi');
+}
+
+export const DogCard = (props) => {    
     if(props.image==null || props.nome == null || props.idade ==null || props.porte == null || props.raça == null){
         return null;
     }
     return (    
-
         <div className="dogcard">
             <div id="main">
                 <div id="img">

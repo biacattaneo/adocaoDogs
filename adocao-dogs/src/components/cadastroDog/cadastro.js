@@ -1,5 +1,6 @@
 import React from 'react';
-import './cadastro.css'
+import './cadastro.css';
+import Home, {adicionarCachorro} from '../home/home';
 
 const Cadastro = (props) => {
     return (
@@ -13,7 +14,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input type="text" required class="campo" id="nameAdotante" placeholder="Bolinha"></input>
+                        <input type="text" required className="campo" id="nameAdotante" placeholder="Bolinha"></input>
                     </div>
                 </div>
                 <div>
@@ -23,7 +24,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="text" class="campo" id="contatoAdotante" placeholder="Vira-lata"></input>
+                        <input required type="text" className="campo" id="contatoAdotante" placeholder="Vira-lata"></input>
                     </div>
                 </div>
                 <div>
@@ -33,7 +34,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="text" class="campo" id="emailAdotante" placeholder="Digite o URL da imagem"></input>
+                        <input required type="file" accept=".jpg,.jpeg,.png"className="campo" id="emailAdotante" placeholder="Digite o URL da imagem"></input>
                     </div>
                 </div>
                 <div>
@@ -43,7 +44,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="text" class="campo" placeholder="Grande" id="passwordAdotante" ></input>
+                        <input required type="text" className="campo" placeholder="Grande" id="passwordAdotante" ></input>
                     </div>
                 </div>
                 <div>
@@ -53,12 +54,13 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="number" placeholder="3" class="campo" id="confirmPasswordAdotante" ></input>
+                        <input required type="number" placeholder="3" className="campo" id="confirmPasswordAdotante" ></input>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <input required type="submit" value="Cadastrar"></input>
+                        {/* <input required type="submit" value="Cadastrar" ></input> */}
+                        <button type="submit" >Enviar</button>
                     </div>
                 </div>
             </form>
