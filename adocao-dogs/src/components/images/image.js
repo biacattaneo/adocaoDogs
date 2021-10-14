@@ -3,7 +3,7 @@ import App from '../../App'
 
 const Images = (props) =>{
     return(
-        <img src={props.image} alt="Doguinho lindo" height="100px" ></img>
+        <img src={props.image} alt="Doguinho lindo" height={props.height} width={props.width} ></img>
     )
 }
 
