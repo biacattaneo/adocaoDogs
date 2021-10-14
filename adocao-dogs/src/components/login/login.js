@@ -8,13 +8,13 @@ const Login = (props) => {
                 <div>
                     <div>
                         <p><label>Email </label>
-                            <input type="email" class="campo" id="nameAdotante" placeholder="exemplodeemail@gmail.com"></input></p>
+                            <input type="email" required class="campo" id="nameAdotante" placeholder="exemplodeemail@gmail.com"></input></p>
                     </div>
                 </div>
                 <div>
                     <div>
                         <p><label>Senha </label>
-                            <input type="password" class="campo" id="contatoAdotante"></input></p>
+                            <input type="password" placeholder="Senha" required class="campo" id="contatoAdotante"></input></p>
                     </div>
                 </div>
                 <div>

@@ -5,6 +5,7 @@ import DogCard from './components/dogcard/dogcard';
 import Images from './components/images/image';
 import Header from './components/header/header';
 import { BrowserRouter } from 'react-router-dom';
+import dogs from './components/home/home';
 import Routes from './Routes';
 
 

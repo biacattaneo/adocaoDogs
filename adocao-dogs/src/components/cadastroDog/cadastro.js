@@ -8,62 +8,52 @@ const Cadastro = (props) => {
             <form>
                 <div>
                     <div>
-                        <label>Nome completo </label>
+                        <label>Nome</label>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <input required type="text" class="campo" id="nameAdotante" placeholder="Nome"></input>
+                        <input type="text" required class="campo" id="nameAdotante" placeholder="Bolinha"></input>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <label>Contato </label>
+                        <label>Raça</label>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <input required type="tel" class="campo" id="contatoAdotante" placeholder="019 123456789"></input>
+                        <input required type="text" class="campo" id="contatoAdotante" placeholder="Vira-lata"></input>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <label>E-mail </label>
+                        <label>Imagem </label>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <input required type="email" class="campo" id="emailAdotante" placeholder="exemplodeemail@gmail.com"></input>
+                        <input required type="text" class="campo" id="emailAdotante" placeholder="Digite o URL da imagem"></input>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <label>Senha </label>
+                        <label>Porte </label>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <input required type="password" class="campo" id="passwordAdotante" ></input>
+                        <input required type="text" class="campo" placeholder="Grande" id="passwordAdotante" ></input>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <label>Confirme senha </label>
+                        <label>Idade</label>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <input required type="password" class="campo" id="confirmPasswordAdotante" ></input>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label>Sobre você </label>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <textarea required id="sobreVoceAdotante" rows="5" cols="20"></textarea>
+                        <input required type="number" placeholder="3" class="campo" id="confirmPasswordAdotante" ></input>
                     </div>
                 </div>
                 <div>

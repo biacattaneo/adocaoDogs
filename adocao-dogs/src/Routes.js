@@ -1,6 +1,7 @@
 import {Route, Switch, Redirect } from 'react-router-dom'
 import Adotante from './components/adotante/adotante';
 import Cadastro from './components/cadastro/cadastro';
+import CadastroDog from './components/cadastroDog/cadastro';
 import DogCard from './components/dogcard/dogcard';
 import Home from './components/home/home';
 import Login from './components/login/login';
@@ -16,6 +17,9 @@ const Routes = () => {
             <Redirect from='/' to='/home' exact />
             <Route path="/cadastro" exact>
                 <Cadastro></Cadastro>
+            </Route>
+            <Route path="/cadastrodog" exact>
+                <CadastroDog></CadastroDog>
             </Route>
             <Route path="/login" exact>
                 <Login></Login>
