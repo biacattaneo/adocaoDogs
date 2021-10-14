@@ -5,7 +5,9 @@ import CadastroDog from './components/cadastroDog/cadastro';
 import DogCard from './components/dogcard/dogcard';
 import Home from './components/home/home';
 import Login from './components/login/login';
-import minhaPagina from './components/login/minhaPagina/minhaPagina';
+import MinhaPagina from './components/login/minhaPagina/minhaPagina';
+// import SobreNos from './components/sobrenos/sobrenos';
+
 
 
 const Routes = () => {
@@ -26,11 +28,14 @@ const Routes = () => {
                 {/* <DogCard image="dora.jpg" nome='Dora' raça='vira-lata' idade='3' porte='Médio'/> */}
             </Route>
             <Route path="/login/minhaPagina" exact>
-                <minhaPagina />
-                <Adotante  nome="Beatriz" idade="20" sobrevoce="Energética, estagiária e ama passar tempo com doguinhos" />
+                <MinhaPagina />
+                {/* <Adotante  nome="Beatriz" idade="20" sobrevoce="Energética, estagiária e ama passar tempo com doguinhos" /> */}
             </Route>
             {/* <Route path="/" exact>
                 
+            </Route> */}
+            {/* <Route path="/sobreNos" exact>
+                <SobreNos/>
             </Route> */}
             <Route render={() => <div>Página não encontrada</div>} exact>
             </Route>

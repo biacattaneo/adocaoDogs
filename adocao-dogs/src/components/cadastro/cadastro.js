@@ -5,7 +5,7 @@ const Cadastro = (props) => {
     return (
         <div className="cadastro">
             <h3>Cadastro</h3>
-            <form>
+            <div className='formCadastroPessoa'>
                 <div>
                     <div>
                         <label>Nome completo </label>
@@ -68,10 +68,10 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="submit" value="Cadastrar"></input>
+                        <input required type="submit" id='btnCadastrarPessoa' value="Cadastrar"></input>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     )
 }

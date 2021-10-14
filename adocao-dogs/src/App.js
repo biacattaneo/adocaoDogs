@@ -20,6 +20,9 @@ function App() {
         <Header></Header>
           <Routes />
       </BrowserRouter>
+      <footer>
+        Desenvolvido por Beatriz Cattaneo e Victor Lucas Mazzotti <br /> Tipo de licenciamento: GNU
+      </footer>
     </div>
   );
 }
