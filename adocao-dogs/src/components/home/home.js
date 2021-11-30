@@ -1,7 +1,15 @@
 import React, {useState} from 'react';
 import DogCard from '../dogcard/dogcard';
 import dora from '../images/dora.jpg';
-import './home.css'
+import './home.css';
+import axios from "axios";
+
+const api = axios.create({
+    baseURL: "http://localhost:8888"
+})
+api.get("/").then((data) => {
+    console.log(data.data.nome);
+})
 
 const Home = (props) => {    
     const adicionarCachorro = ()=>{
@@ -44,6 +52,7 @@ const Home = (props) => {
             <div>
             <div className="home">
                 <h2 id="welcome">Bem vindo ao Adote um Dog</h2>
+                
                 {dogs.map((i, index)=>{
                     return(
                         <DogCard key={index} nome={i.nome} idade={i.idade} image={i.image} porte={i.porte} raça={i.porte}></DogCard>
