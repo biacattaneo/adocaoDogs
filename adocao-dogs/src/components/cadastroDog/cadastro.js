@@ -55,7 +55,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input type="file" name="imagem" accept=".jpg,.jpeg,.png" className="campo"  placeholder="Digite o URL da imagem"></input>
+                        <input type="text" name="imagem" className="campo"  placeholder="Digite o URL da imagem"></input>
                     </div>
                 </div>
                 <div>

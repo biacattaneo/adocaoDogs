@@ -7,9 +7,9 @@ export const teste = ()=>{
 }
 
 export const DogCard = (props) => {    
-    if(props.image==null || props.nome == null || props.idade ==null || props.porte == null || props.raça == null){
-        return null;
-    }
+    // if(props.image==null || props.nome == null || props.idade ==null || props.porte == null || props.raça == null){
+    //     return null;
+    // }
     return (    
         <div className="dogcard">
             <div id="main">

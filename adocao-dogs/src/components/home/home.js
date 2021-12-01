@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import DogCard from '../dogcard/dogcard';
 import dora from '../images/dora.jpg';
 import './home.css';
@@ -10,27 +10,6 @@ const api = axios.create({
 
 
 const Home = (props) => {    
-    const adicionarCachorro = (nome,idade,image,porte,raça) => {
-        var newDogs = [...dogs, 
-            {
-                nome: nome,
-                idade: idade,
-                image: image,
-                porte: porte,
-                raça: raça
-            }
-        ]
-        setDogs(newDogs);
-
-    }
-    api.get("/get_cachorros").then((response) => {
-        response.data.map((i)=>{
-            console.log(i.nome_cachorro);
-        })
-        // adicionarCachorro('Victor','20','https://i.pinimg.com/550x/7e/31/23/7e31237be7a4fa653864720072eef983.jpg','GORDO','NEGRO');
-        console.log('teste');
-    })
-    
     const [dogs, setDogs] = useState(
         [
             {
@@ -63,6 +42,32 @@ const Home = (props) => {
             }
         ]
         );
+    console.log(dogs);
+    const adicionarCachorro = (nome,idade,image,porte,raça) => {
+        var newDogs = [...dogs, 
+            {
+                nome: nome,
+                idade: idade,
+                image: image,
+                porte: porte,
+                raça: raça
+            }
+        ]
+        // console.log(newDogs);
+        setDogs(newDogs);
+
+    }
+    useEffect(()=>{
+        api.get("/get_cachorros").then((response) => {
+            response.data.map((i)=>{
+                // console.log(i.nome_cachorro);
+            })
+            // adicionarCachorro('Victor','20','https://i.pinimg.com/550x/7e/31/23/7e31237be7a4fa653864720072eef983.jpg','GORDO','NEGRO');
+            setDogs(response.data);
+            // console.log(response);
+        })
+    },[])
+    
         
         
     
@@ -73,7 +78,7 @@ const Home = (props) => {
                     
                     {dogs.map((i, index)=>{
                         return(
-                            <DogCard key={index} nome={i.nome} idade={i.idade} image={i.image} porte={i.porte} raça={i.porte}></DogCard>
+                            <DogCard key={index} nome={i.nome_cachorro} idade={i.idade} image={i.foto} porte={i.porte} raça={i.raça}></DogCard>
                             );
                         })
                     }
