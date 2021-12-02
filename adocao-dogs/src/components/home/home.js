@@ -78,7 +78,7 @@ const Home = (props) => {
                     
                     {dogs.map((i, index)=>{
                         return(
-                            <DogCard key={index} nome={i.nome_cachorro} idade={i.idade} image={i.foto} porte={i.porte} raça={i.raça}></DogCard>
+                            <DogCard key={index} nome={i.nome_cachorro} idade={i.idade} sexo={i.sexo} image={i.foto} porte={i.porte} raça={i.raça} castrado={i.castrado} vacinas={i.vacinas}></DogCard>
                             );
                         })
                     }

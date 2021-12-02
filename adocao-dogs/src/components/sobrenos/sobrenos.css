@@ -1,0 +1,25 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1rem;
+}
+#TitleSobreNos{
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.sobreNosClass{
+    text-align: center;
+    margin-right: 33vw;
+    margin-left: 33vw;
+    color: white;
+    box-shadow: 5px 2px 2px black;
+}
+
+.sobreNosClass > #cardNos{
+    background-color: green;
+    
+}
+#img{
+    padding-top: 10px;
+}

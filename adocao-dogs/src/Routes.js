@@ -6,6 +6,7 @@ import DogCard from './components/dogcard/dogcard';
 import Home from './components/home/home';
 import Login from './components/login/login';
 import MinhaPagina from './components/login/minhaPagina/minhaPagina';
+import SobreNos from './components/sobrenos/sobrenos';
 // import SobreNos from './components/sobrenos/sobrenos';
 
 
@@ -34,9 +35,9 @@ const Routes = () => {
             {/* <Route path="/" exact>
                 
             </Route> */}
-            {/* <Route path="/sobreNos" exact>
+            <Route path="/sobreNos" exact>
                 <SobreNos/>
-            </Route> */}
+            </Route>
             <Route render={() => <div>Página não encontrada</div>} exact>
             </Route>
         </Switch>
