@@ -7,9 +7,11 @@ import Home from './components/home/home';
 import Login from './components/login/login';
 import MinhaPagina from './components/login/minhaPagina/minhaPagina';
 import SobreNos from './components/sobrenos/sobrenos';
+import Cookies from 'universal-cookie';
 // import SobreNos from './components/sobrenos/sobrenos';
 
 
+const cookies = new Cookies();
 
 const Routes = () => {
     return (
@@ -28,10 +30,11 @@ const Routes = () => {
                 <Login></Login>
                 {/* <DogCard image="dora.jpg" nome='Dora' raça='vira-lata' idade='3' porte='Médio'/> */}
             </Route>
-            <Route path="/login/minhaPagina" exact>
-                <MinhaPagina />
+            <Route path="/sair" exact>
+                <Redirect to='/home' exact/>
                 {/* <Adotante  nome="Beatriz" idade="20" sobrevoce="Energética, estagiária e ama passar tempo com doguinhos" /> */}
             </Route>
+            
             {/* <Route path="/" exact>
                 
             </Route> */}

@@ -9,9 +9,13 @@ import dogs from './components/home/home';
 import Routes from './Routes';
 
 
+
 function App() {
   useEffect(() => {
     document.title = "Adote um dog!"
+    // let cookies = new Cookies()
+    // cookies.set('teste','este é o valor de teste', {path: '/'});
+    // console.log(cookies.get('teste'));
   }, []);
   return (
     <div className="App">

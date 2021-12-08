@@ -2,6 +2,8 @@ import React from 'react';
 import './cadastro.css';
 import Home, { adicionarCachorro } from '../home/home';
 import axios from 'axios';
+import Cookies from 'universal-cookie';
+
 var querystring = require('querystring');
 
 const api = axios.create({
@@ -9,6 +11,7 @@ const api = axios.create({
 })
 
 const Cadastro = (props) => {
+    let cookies = new Cookies();
     function handleSubmit(e) {
         e.preventDefault();
         api({
@@ -21,9 +24,9 @@ const Cadastro = (props) => {
                 dogPorte: e.target.elements.porte.value,
                 dogIdade: e.target.elements.idade.value,
                 dogSexo: e.target.elements.sexo.value,
-                dogCastrado: e.target.elements.Cadastro.value,
-                dogVacinas: e.target.elements.vacinas.value
-                
+                dogCastrado: e.target.elements.castrado.value,
+                dogVacinas: e.target.elements.vacinas.value,
+                cpfDoador: cookies.get('logado')
             }
         });
 

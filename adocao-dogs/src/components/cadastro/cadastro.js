@@ -1,11 +1,47 @@
 import React from 'react';
 import './cadastro.css'
+import axios from 'axios';
+import { Redirect, Switch } from 'react-router-dom';
+import Cookies from 'universal-cookie';
+
+
+
+
+const api = axios.create({
+    baseURL: "http://localhost:8888"
+})
 
 const Cadastro = (props) => {
+    let cookies = new Cookies();
+    function handleSubmit(e) {
+        e.preventDefault();
+        api({
+            method: 'post',
+            url: '/cadastrar',
+            data: {
+                Name: e.target.elements.nome.value,
+                Contato: e.target.elements.celular.value,
+                Email: e.target.elements.email.value,
+                Senha: e.target.elements.senha.value,
+                About: e.target.elements.about.value,
+                Cpf: e.target.elements.cpf.value
+            }
+        }).then((response)=>{
+            if(response.status==200){
+                cookies.set('logado',`${e.target.elements.cpf.value}`);
+                window.location.href='/home';
+            }
+            else{
+                alert('Não foi possível cadastrar este usuário.');
+
+            }
+        });
+
+    }
     return (
         <div className="cadastro">
             <h3>Cadastro</h3>
-            <div className='formCadastroPessoa'>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <div>
                         <label>Nome completo </label>
@@ -13,7 +49,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="text" className="campo" id="nameAdotante" placeholder="Nome"></input>
+                        <input required type="text" name="nome" className="campo" id="nameAdotante" placeholder="Nome"></input>
                     </div>
                 </div>
                 <div>
@@ -23,7 +59,17 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="tel" className="campo" id="contatoAdotante" placeholder="019 123456789"></input>
+                        <input name="celular" required type="tel" className="campo" id="contatoAdotante" placeholder="019 123456789"></input>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>CPF</label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input name="cpf" required type="text" id='btnCadastrarPessoa' placeholder=''></input>
                     </div>
                 </div>
                 <div>
@@ -31,9 +77,10 @@ const Cadastro = (props) => {
                         <label>E-mail </label>
                     </div>
                 </div>
+                
                 <div>
                     <div>
-                        <input required type="email" className="campo" id="emailAdotante" placeholder="exemplodeemail@gmail.com"></input>
+                        <input name="email" required type="email" className="campo" id="emailAdotante" placeholder="exemplodeemail@gmail.com"></input>
                     </div>
                 </div>
                 <div>
@@ -43,7 +90,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input required type="password" className="campo" id="passwordAdotante" ></input>
+                        <input name="senha" required type="password" className="campo" id="passwordAdotante" ></input>
                     </div>
                 </div>
                 <div>
@@ -63,7 +110,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <textarea required id="sobreVoceAdotante" rows="5" cols="20"></textarea>
+                        <textarea name="about" required id="sobreVoceAdotante" rows="5" cols="20"></textarea>
                     </div>
                 </div>
                 <div>
@@ -71,7 +118,8 @@ const Cadastro = (props) => {
                         <input required type="submit" id='btnCadastrarPessoa' value="Cadastrar"></input>
                     </div>
                 </div>
-            </div>
+                
+            </form>
         </div>
     )
 }
