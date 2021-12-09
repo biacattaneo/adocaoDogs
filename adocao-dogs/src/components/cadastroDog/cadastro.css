@@ -9,3 +9,11 @@
     height: 20px;
     width: 200px;
 }
+
+#btnCadastroDog{
+    background-color: green ;
+    color: white;
+    margin-top: 5px;
+    width: 140px;
+    height: 23px;
+}

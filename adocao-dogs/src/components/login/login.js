@@ -23,7 +23,6 @@ const Login = (props) => {
                 // cookies.set('logado',`${e.target.elements.cpf.value}`);
                 // window.location.href='/home';
                 cookies.set('logado',response.data.cpf)
-                alert('foi possível logar.');
                 {window.location.href="/home";}
             }
         }).catch((response)=>{

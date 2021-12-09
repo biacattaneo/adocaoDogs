@@ -13,17 +13,18 @@ let cookies = new Cookies();
 let mydogs = [1];
 const Home = (props) => {    
     
-
+    
     const [dogs, setDogs] = useState([{}]);
-    console.log(dogs);
-    const adicionarCachorro = (nome,idade,image,porte,raça) => {
+    const adicionarCachorro = (nome,idade,image,porte,raça, castrado, vacinas) => {
         var newDogs = [...dogs, 
             {
                 nome: nome,
                 idade: idade,
                 image: image,
                 porte: porte,
-                raça: raça
+                raça: raça,
+                castrado: castrado,
+                vacinas: vacinas
             }
         ]
         // console.log(newDogs);
@@ -36,7 +37,6 @@ const Home = (props) => {
             response.data.map((i)=>{
                 // console.log(i.nome_cachorro);
             })
-            // adicionarCachorro('Victor','20','https://i.pinimg.com/550x/7e/31/23/7e31237be7a4fa653864720072eef983.jpg','GORDO','NEGRO');
             setDogs(response.data);
             // console.log(response);
         })

@@ -11,6 +11,9 @@
 }
 
 #btnCadastrarPessoa{
-    margin-top: 8px;
+    background-color: green ;
+    color: white;
+    margin-top: 5px;
+    width: 140px;
+    height: 23px;
 }
-
