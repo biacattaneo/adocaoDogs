@@ -13,7 +13,8 @@ const Adotante = (props) => {
                     <div id='img'>
                         <Images image={props.image} height='250px' width='250px' />
                     </div>
-                    <p>Nome: {props.nome} - Idade: {props.idade}</p>
+                    <p>Nome: {props.nome} - Idade: {props.idade} - Celular: {props.celular}</p>
+                    <p>Email: {props.email}</p>
                     <p>Sobre: {props.sobrevoce}</p>
                 </div>
             </div>

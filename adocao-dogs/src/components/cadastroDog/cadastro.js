@@ -28,6 +28,14 @@ const Cadastro = (props) => {
                 dogVacinas: e.target.elements.vacinas.value,
                 cpfDoador: cookies.get('logado')
             }
+        }).then((response)=>{
+            if(response.status == 200){
+                alert('Cachorro cadastrado com sucesso!');
+                window.location.href='/home';
+            }
+            else{
+                alert('Não foi possível cadastrar este cachorro.');
+            }
         });
 
     }
@@ -118,7 +126,7 @@ const Cadastro = (props) => {
                 <div>
                     <div>
                         {/* <input required type="submit" value="Cadastrar" ></input> */}
-                        <button type="submit">Enviar</button>
+                        <button id='btnCadastroDog' type="submit">Enviar</button>
                     </div>
                 </div>
             </form>

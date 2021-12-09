@@ -29,11 +29,11 @@ const Cadastro = (props) => {
         }).then((response)=>{
             if(response.status==200){
                 cookies.set('logado',`${e.target.elements.cpf.value}`);
+                alert('Cadastro realizado com sucesso!');
                 window.location.href='/home';
             }
             else{
                 alert('Não foi possível cadastrar este usuário.');
-
             }
         });
 
@@ -69,7 +69,7 @@ const Cadastro = (props) => {
                 </div>
                 <div>
                     <div>
-                        <input name="cpf" required type="text" id='btnCadastrarPessoa' placeholder=''></input>
+                        <input name="cpf" required type="text" className="campo" id='cpf' placeholder='123.456.789-10'></input>
                     </div>
                 </div>
                 <div>

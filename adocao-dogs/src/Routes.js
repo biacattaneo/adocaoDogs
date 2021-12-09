@@ -32,12 +32,11 @@ const Routes = () => {
             </Route>
             <Route path="/sair" exact>
                 <Redirect to='/home' exact/>
-                {/* <Adotante  nome="Beatriz" idade="20" sobrevoce="Energética, estagiária e ama passar tempo com doguinhos" /> */}
             </Route>
             
-            {/* <Route path="/" exact>
-                
-            </Route> */}
+            <Route path="/minhaPagina" exact>
+                <Adotante  nome="Beatriz" idade="20" sobrevoce="Energética, estagiária e ama passar tempo com doguinhos" />
+            </Route>
             <Route path="/sobreNos" exact>
                 <SobreNos/>
             </Route>
